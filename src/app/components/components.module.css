@@ -1,0 +1,39 @@
+.centerBoxRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.centerBoxColumn {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quoteBox {
+  height: clamp(250px, 400px, 525px);
+  width: clamp(375px, 525px, 675px);
+  background-color: white;
+  justify-content: space-between;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.button {
+  height: clamp(1em, 1.5em, 2em);
+  border: none;
+  margin: 0 0 0 auto;
+  padding: 0 0.5em;
+  width: auto;
+  overflow: visible;
+  background: rgb(172, 200, 229);
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  transition: background-color var(--fade-duration) ease;
+}
