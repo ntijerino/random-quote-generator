@@ -1,4 +1,7 @@
 "use client"
+/*
+This is the main UI component for the Random Quote Machine. It holds everything.
+*/
 
 import React from "react";
 import { randomColor } from "../random-colors";
