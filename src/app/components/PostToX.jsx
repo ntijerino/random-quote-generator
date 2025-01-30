@@ -1,4 +1,8 @@
 "use client";
+/*
+This is a button that will post the current quote to X.
+*/
+
 import React from "react";
 import { selectAuthor, selectQuote } from "../GlobalRedux/Features/QuoteMachine/quoteSlice";
 import { selectColor } from "../GlobalRedux/Features/RandomColor/colorSlice";

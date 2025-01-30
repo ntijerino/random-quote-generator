@@ -1,4 +1,8 @@
 "use client";
+/*
+This is a button that will post the current quote to Tumblr.
+*/
+
 import React from "react";
 import styles from "./components.module.css";
 import { selectAuthor, selectQuote } from "../GlobalRedux/Features/QuoteMachine/quoteSlice";
