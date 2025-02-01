@@ -1,5 +1,7 @@
 "use client";
-
+/*
+A slice was created to handle the random quotes that are updating the main component.
+*/
 import { createSlice } from "@reduxjs/toolkit";
 import { getRandomQuote } from "../../../quoteDB";
 

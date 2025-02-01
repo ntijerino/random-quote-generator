@@ -1,5 +1,7 @@
 "use client";
-
+/*
+A separate slice was created for random colors because the functionality of randomly changing the color of the ui is separate from the random quote.
+*/
 import { createSlice } from "@reduxjs/toolkit";
 import { randomColor } from "../../../random-colors";
 
