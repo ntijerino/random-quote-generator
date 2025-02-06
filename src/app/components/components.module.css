@@ -1,39 +1,85 @@
-.centerBoxRow {
+:root {
+  --fade-duration: 2s;
+  --fast-fade-duration: 1.25s;
+}
+
+#container {
+  transition: background-color var(--fade-duration) ease;
+  font-size: 25px;
+}
+
+.quoteBox {
+  background-color: white;
+  border-radius: 5px;
+}
+
+#quoteText {
+  transition: all var(--fade-duration) ease;
+  padding: 0.25em;
+}
+
+#author {
+  padding: 0.25em;
+  text-align: right;
+  transition: all var(--fade-duration) ease;
+}
+
+#creatorLink {
+  color: white;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 1em;
+  text-align: center;
+}
+
+#buttons {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+}
+
+#share {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.25em;
+  padding: 0.25em; 
+  text-align: center;
+}
+
+.linkDiv {
+  flex-basis: 50%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  border-radius: 5px;
+}
+
+#newQuote {
+  margin-top: 1em;
 }
 
 .centerBoxColumn {
   display: flex;
-  height: 100vh;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; 
+  transition: background-color var(--fade-duration) ease;
 }
 
-.quoteBox {
-  height: clamp(250px, 400px, 525px);
-  width: clamp(375px, 525px, 675px);
-  background-color: white;
-  justify-content: space-between;
-  margin: auto;
-  border-radius: 5px;
-}
-
-.button {
-  height: clamp(1em, 1.5em, 2em);
-  border: none;
-  margin: 0 0 0 auto;
-  padding: 0 0.5em;
-  width: auto;
-  overflow: visible;
-  background: rgb(172, 200, 229);
+.linkButton {
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: min-content;
   color: white;
   cursor: pointer;
   font: inherit;
-  line-height: normal;
   transition: background-color var(--fade-duration) ease;
+}
+
+.button {
+  flex-grow: 1;
+  padding: 0.2em;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  transition: background-color var(--fade-duration) ease;
+  border-radius: 5px;
 }

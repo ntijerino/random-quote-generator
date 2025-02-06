@@ -19,27 +19,28 @@ export default function RandomQuoteMachine() {
   const dispatch = useDispatch();
     
   function handleClick() {
-    let newQuote = getRandomQuote();
-    dispatch(updateFullQuote(newQuote));
+    dispatch(updateFullQuote(getRandomQuote()));
     dispatch(updateColor(randomColor(1, 127, 7)));
   }
 
   return (
-    <div className={styles.centerBoxColumn}>
-      <div id="quote-box"  className={`${styles.quoteBox} ${styles.centerBoxColumn}`}>
-        <div className={styles.centerBoxColumn}>
-          <div id="quote-text" style={{color: aRandomColor}} suppressHydrationWarning>{fullQuote.quote}</div>
-          <div id="author" style={{color: aRandomColor}} suppressHydrationWarning> - {fullQuote.author}</div> 
+    <div id={styles.container} className={styles.centerBoxColumn}>
+      <div id={styles.quoteBox}  className={`${styles.quoteBox} ${styles.centerBoxColumn}`}>
+        <div id={styles.quoteHolder} className={styles.centerBoxColumn}>
+          <div id={styles.quoteText} style={{color: aRandomColor}} suppressHydrationWarning>{fullQuote.quote}</div>
+          <div id={styles.author} style={{color: aRandomColor}} suppressHydrationWarning> - {fullQuote.author}</div> 
         </div>
-        <a id="creator-link" style={{color: aRandomColor}} title="More projects to check out." href="https://codepen.io/Noel-Tijerino" suppressHydrationWarning>Noel Tijerino</a>
-      </div>
-        <div id="buttons" className={styles.centerBoxRow}>
-          <div id="share" className={styles.centerBoxRow}>
-            <PostToX suppressHydrationWarning /><br/>
-            <PostToTumblr suppressHydrationWarning />
+        <div id={styles.buttons}>
+          <div id={styles.share} >
+            <div className={styles.linkDiv} style={{backgroundColor: aRandomColor}} suppressHydrationWarning><PostToX /></div>
+            <div className={styles.linkDiv} style={{backgroundColor: aRandomColor}} suppressHydrationWarning><PostToTumblr /></div>
           </div>  
-          <button id="new-quote" onClick={handleClick} style={{backgroundColor: aRandomColor}} suppressHydrationWarning >New Quote</button>
+          <button id={styles.newQuote} className={styles.button} onClick={handleClick} style={{backgroundColor: aRandomColor}} suppressHydrationWarning >New Quote</button>
         </div>
+        {/* I think I was wrong to move the new quote button out of the buttons div. I will probably put it back in for wider screen sizes. */}
+        
+      </div>
+      <a id={styles.creatorLink} title="More projects to check out." href="https://codepen.io/Noel-Tijerino" suppressHydrationWarning>Noel Tijerino</a>
     </div>
   );
 }
