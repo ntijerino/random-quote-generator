@@ -8,9 +8,11 @@
 
   display: grid;
   grid-template-rows: 20px 1fr 20px;
+  /* height: 100vh; */
+  height: clamp(min(350px, 100vh), max(575px, 100vh), max(750px, 100vh));
   align-items: center;
   justify-items: center;
-  min-height: 100svh;
+  min-height: 50vh;
   padding: 80px;
   gap: 64px;
   font-family: var(--font-geist-sans);
@@ -30,6 +32,7 @@
 .main {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly; 
   gap: 32px;
   grid-row-start: 2;
 }
@@ -166,74 +169,3 @@ a.secondary {
     filter: invert();
   }
 }
-
-#author {
-  align-self: stretch;
-  text-align: right;
-  padding: 10px;
-  transition: all var(--fade-duration) ease;
-}
-
-#buttons {
-  width: clamp(375px, 525px, 675px);
-  align-self: flex-end;
-}
-
-#container {
-  transition: background-color var(--fade-duration) ease;
-  height: clamp(min(350px, 100vh), max(575px, 100vh), max(750px, 100vh));
-  width: clamp(min(475px, 100vw), max(750px, 100vw), max(1000px, 100vw));
-  font-size: 25px;
-}
-
-#creator-link {
-  color: white;
-  padding: 1em;
-#new-quote {
-  margin-right: 0.75em;
-}
-
-}
-
-#share {
-  gap: 0.75em;
-  padding: 15px;
-}
-
-#text {
-  transition: all var(--fade-duration) ease;
-  padding: 10px;
-}
-
-.center-box-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.center-box-column {
-  display: flex;
-  height: 100vh;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.quote-box {
-  height: clamp(250px, 400px, 525px);
-  width: clamp(375px, 525px, 675px);
-  background-color: white;
-  justify-content: space-between;
-  margin: auto;
-  border-radius: 5px;
-}
-
-.button {
-  transition: background-color var(--fade-duration) ease;
-  color: white;
-  height: clamp(1em, 1.5em, 2em);
-  width: clamp(1em, 1.5em, 2em);
-}
-/*  */
