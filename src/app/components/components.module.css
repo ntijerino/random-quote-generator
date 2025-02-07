@@ -6,6 +6,7 @@
 #container {
   height: 100%;
   font-size: 25px;  
+  margin-top: 1.5em;
 }
 
 .quoteBox {
@@ -59,10 +60,6 @@
   border-radius: 5px;
 }
 
-#newQuote {
-  /* margin-top: 1em; */
-}
-
 .centerBoxColumn {
   display: flex;
   flex-direction: column; 
@@ -90,7 +87,7 @@
   transition: background-color var(--fade-duration) ease;
 }
 
-@media (min-width: 560px) {
+@media (min-width: 530px) {
   #buttons {
     justify-content: space-between;
   }
@@ -98,6 +95,10 @@
   .button {
     flex-grow: 0;
     padding: 1em;
+  }
+
+  #container {
+    margin-top: 5em;
   }
 
   .linkDiv {

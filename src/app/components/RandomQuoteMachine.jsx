@@ -37,8 +37,6 @@ export default function RandomQuoteMachine() {
           </div>  
           <button id={styles.newQuote} className={styles.button} onClick={handleClick} style={{backgroundColor: aRandomColor}} suppressHydrationWarning >New Quote</button>
         </div>
-        {/* I think I was wrong to move the new quote button out of the buttons div. I will probably put it back in for wider screen sizes. */}
-        
       </div>
       <a id={styles.creatorLink} title="More projects to check out." href="https://codepen.io/Noel-Tijerino" suppressHydrationWarning>Noel Tijerino</a>
     </div>
