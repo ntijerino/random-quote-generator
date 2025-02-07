@@ -4,8 +4,8 @@
 }
 
 #container {
-  transition: background-color var(--fade-duration) ease;
-  font-size: 25px;
+  height: 100%;
+  font-size: 25px;  
 }
 
 .quoteBox {
@@ -36,6 +36,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 #share {

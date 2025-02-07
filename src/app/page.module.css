@@ -6,16 +6,16 @@
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
 
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  /* height: 100vh; */
-  height: clamp(min(350px, 100vh), max(575px, 100vh), max(750px, 100vh));
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* height: clamp(min(350px, 100vh), max(575px, 100vh), max(750px, 100vh)); */
   align-items: center;
   justify-items: center;
   min-height: 50vh;
-  padding: 80px;
-  gap: 64px;
+  padding: 1em;
   font-family: var(--font-geist-sans);
+  overflow-y: scroll;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -131,8 +131,8 @@ a.secondary {
 
 @media (max-width: 600px) {
   .page {
-    padding: 32px;
-    padding-bottom: 80px;
+    /* padding: 32px; */
+    /* padding-bottom: 80px; */
   }
 
   .main {

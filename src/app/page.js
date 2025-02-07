@@ -9,9 +9,7 @@ export default function Home() {
   const rColor = useSelector(selectColor);
   return (
     <div className={styles.page} style={{backgroundColor: rColor}} suppressHydrationWarning>
-      <main className={styles.main}>
         <RandomQuoteMachine />
-      </main>
     </div>
   );
 }
