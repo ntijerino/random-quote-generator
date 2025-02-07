@@ -37,14 +37,16 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 0.25em; 
 }
 
 #share {
   display: flex;
   flex-direction: row;
+  flex-grow: 1;
   flex-wrap: nowrap;
   gap: 0.25em;
-  padding: 0.25em; 
+  justify-content: space-between;
   text-align: center;
 }
 
@@ -52,11 +54,13 @@
   flex-basis: 50%;
   flex-grow: 1;
   flex-shrink: 1;
+  align-content: center;
+  align-self: stretch;
   border-radius: 5px;
 }
 
 #newQuote {
-  margin-top: 1em;
+  /* margin-top: 1em; */
 }
 
 .centerBoxColumn {
@@ -77,10 +81,30 @@
 
 .button {
   flex-grow: 1;
-  padding: 0.2em;
+  border-radius: 5px;
   color: white;
   cursor: pointer;
   font: inherit;
+  margin: 0;
+  padding: 0.5em 0;
   transition: background-color var(--fade-duration) ease;
-  border-radius: 5px;
+}
+
+@media (min-width: 560px) {
+  #buttons {
+    justify-content: space-between;
+  }
+
+  .button {
+    flex-grow: 0;
+    padding: 1em;
+  }
+
+  .linkDiv {
+    flex-grow: 0;
+  }
+
+  #share {
+    flex-grow: 0;
+  }
 }
